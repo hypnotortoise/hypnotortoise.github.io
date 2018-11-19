@@ -2,7 +2,7 @@ image: ruby:2.3
 
 variables:
   JEKYLL_ENV: production
-  PAGES_REPO_NWO:
+  PAGES_REPO_NWO: $CI_PROJECT_PATH
 
 pages:
   script:
