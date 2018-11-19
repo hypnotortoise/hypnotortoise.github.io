@@ -1,4 +1,4 @@
-image: ruby:2.3
+image: ruby:2.5
 
 variables:
   JEKYLL_ENV: production
@@ -7,7 +7,7 @@ variables:
 pages:
   script:
   - bundle install
-  - bundle build -d public/
+  - bundle jekyll build -d public/
   artifacts:
     paths:
     - public
