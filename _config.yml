@@ -15,4 +15,4 @@ defaults:
     values:
       layout: "default"
 
-show_downloads: ["false"]
+site.show_downloads: ["false"]
