@@ -6,6 +6,8 @@ description: [ Thanks for stopping by ]
 timezone: Europe/Berlin
 encoding: utf-8
 
+exclude: [vendor, "Gemfile", "Gemfile.lock"] # make sure to exclude 'vendor' and Gemfiles from the build
+
 defaults:
   -
     scope:

@@ -4,12 +4,19 @@ variables:
   JEKYLL_ENV: production
   PAGES_REPO_NWO: $CI_PROJECT_PATH
 
+# add bundle cache to 'vendor' for speeding up builds
+cache:
+  paths:
+    - vendor/
+
+before_script:
+  - bundle install --path vendor
+
 pages:
   script:
-  - bundle install
   - bundle exec jekyll build -d public
   artifacts:
     paths:
     - public
   only:
-  - master
+    - master
