@@ -1,0 +1,15 @@
+image: ruby:2.3
+
+variables:
+  JEKYLL_ENV: production
+  PAGES_REPO_NWO:
+
+pages:
+  script:
+  - bundle install
+  - bundle exec jekyll serve
+  artifacts:
+    paths:
+    - public
+  only:
+  - master
